@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import SingleQuestion from './SingleQuestion'
-// const url = 'https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple'
-const url = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple"
+const url = 'https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple'
 
 
 const Questions = ({setStartGame}) => {
@@ -71,7 +70,8 @@ const Questions = ({setStartGame}) => {
            {questionAndAnswers.map((item,index)=>{
           const {questions, answers,correctAnswer,selectedAnswer} = item
           return (<div>
-            <SingleQuestion key={index} 
+            <SingleQuestion 
+            key={index}
             question={questions} 
             answers={answers}
             updateAnswer={updateAnswer}
